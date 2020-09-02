@@ -1,0 +1,36 @@
+<div class="max-xl">
+
+    <div class="jumbotron jumbotron-fluid bg-dark">
+        <div class="container">
+          <h2 class="display-4">Buscador</h2>
+          <form id="search-form" role="search" class="bd-search d-flex align-items-center search-form">
+            <input type="search" class="form-control ds-input" id="search-input" name="search-input" placeholder="Search for a movie..." (keydown.enter) = "showResults (searchInput.value)" #searchInput/>       
+          </form>
+        </div>
+    </div>
+
+    <div class="cards-container" *ngIf="listResultsSearch != []">
+
+        <a class="card" *ngFor="let result of listResultsSearch" (click)="seeMovie(result.id)" >
+            <img *ngIf="result.poster_path !=null" class="card-image" src="http://image.tmdb.org/t/p/w300{{result.poster_path}}" alt="Imagen de la película" />
+            <img *ngIf="result.poster_path == null" class="card-image" src="../../../assets/img/image-not-available.jpg" alt="Imagen de la película" />
+            <div class="card-title">
+                <span>{{result.original_title}}</span>
+            </div>
+            
+        </a>
+    </div>
+
+  <h3>Más vistas</h3>
+  <div class="cards-container">
+
+      <a class="card" *ngFor="let result of listResults" (click)="seeMovie(result.id)">
+          <img class="card-image" src="http://image.tmdb.org/t/p/w300{{result.poster_path}}" alt="Imagen de la película" />
+          <div class="card-title">
+              <span>{{result.original_title}}</span>
+          </div>
+          
+      </a>
+  </div>
+
+</div>

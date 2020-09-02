@@ -1,0 +1,22 @@
+<section class="max-xl movie-section">
+    <h3 class="text-center">{{infoMovie.original_title}}</h3>
+    <hr/>
+    <div class="movie-section-box">
+        <img src="http://image.tmdb.org/t/p/w300{{infoMovie.poster_path}}" alt="Imagen"/>
+
+        <div class="movie-section-box--text">
+            <h3 class="font-bolder">Sinopsis</h3>
+            <p>{{infoMovie.overview}}</p>
+
+            <h4 class="font-bolder" *ngIf="infoMovie.tagline">Tagline</h4>
+            <p>{{infoMovie.tagline}}</p>
+
+            <h4 class="font-bolder" *ngIf="infoMovie.homepage">Homepage</h4>
+            <a class="homepage" href="{{infoMovie.homepage}}" target="_blank">{{infoMovie.homepage}}</a>
+
+            <img class="block-element backdrop-image" src="http://image.tmdb.org/t/p/w300{{infoMovie.backdrop_path}}" alt="Imagen"/>
+
+        </div>
+    </div>
+
+</section>

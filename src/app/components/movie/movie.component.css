@@ -1,0 +1,23 @@
+.movie-section-box{
+   display:flex;
+   justify-content: space-between;
+   margin:40px 0px;
+}
+
+.movie-section-box >img{
+    width:30%;
+    border-radius:.25rem;
+}
+
+.movie-section-box--text{
+    width:65%
+}
+
+.homepage{
+    color:lightskyblue;
+}
+
+.backdrop-image{
+    margin-top:40px
+}
+
